@@ -56,8 +56,8 @@ app.get('/categories/:category/toys', (req, res) => {
 			const categoryId = toys[index]['category_id'];
 			if (categoryId == category_id) toysWithCategories.push(toys[index]);
 		}
+		res.send(toysWithCategories);
 	}
-	res.send(toysWithCategories);
 });
 
 /*****************************************/
